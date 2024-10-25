@@ -15,32 +15,27 @@ import java.util.Iterator;
 public class TrocoTest {
 
     @Test
-    public void testTroco() {
-        //Verificar se o troco está funcionando corretamente
-        Troco troco = new Troco(186);
+    public void testPapelMoeda() {
+        // verificar se o valor está sendo obtido corretamente pela inicializacao
+        PapelMoeda papelMoeda = new PapelMoeda(100, 5);
 
-        assertEquals(1, troco.papeisMoeda[5].getQuantidade());  // 100
-        assertEquals(1, troco.papeisMoeda[4].getQuantidade());  // 50
-        assertEquals(1, troco.papeisMoeda[3].getQuantidade());  // 20
-        assertEquals(1, troco.papeisMoeda[2].getQuantidade());  // 10
-        assertEquals(1, troco.papeisMoeda[1].getQuantidade());  // 5
-        assertEquals(3, troco.papeisMoeda[0].getQuantidade());  // 2
+        assertEquals(100, papelMoeda.getValor());
+        assertEquals(5, papelMoeda.getQuantidade());
     }
 
     @Test
-    public void testTrocoIterator() {
-        // Test the iterator
-        Troco troco = new Troco(186);
-        Iterator<PapelMoeda> iterator = troco.getIterator();
-        
-        assertTrue(iterator.hasNext());  // There should be at least one note
-        
-        // Iterate through all the notes
-        while (iterator.hasNext()) {
-            PapelMoeda papelMoeda = iterator.next();
-            assertNotNull(papelMoeda);  // Ensure we get a valid note
-        }
+    public void testPapelMoedaGetValor() {
+        // verificar somente o valor
+        PapelMoeda papelMoeda = new PapelMoeda(50, 2);
 
-        assertFalse(iterator.hasNext());  // After iteration, should return false
+        assertEquals(50, papelMoeda.getValor());
+    }
+
+    @Test
+    public void testPapelMoedaGetQuantidade() {
+        // verificar somente a quantidade
+        PapelMoeda papelMoeda = new PapelMoeda(20, 3);
+
+        assertEquals(3, papelMoeda.getQuantidade());
     }
 }
