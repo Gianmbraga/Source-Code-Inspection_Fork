@@ -27,7 +27,6 @@ public class TrocoTest {
     public void testPapelMoedaGetValor() {
         // verificar somente o valor
         PapelMoeda papelMoeda = new PapelMoeda(50, 2);
-
         assertEquals(50, papelMoeda.getValor());
     }
 
