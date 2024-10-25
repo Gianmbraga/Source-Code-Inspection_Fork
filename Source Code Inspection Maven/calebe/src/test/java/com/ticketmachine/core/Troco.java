@@ -6,9 +6,9 @@ import java.util.Iterator;
  *
  * @author Calebe de Paula Bianchini
  */
-public class Troco {
+class Troco {
 
-    public PapelMoeda[] papeisMoeda;
+    protected PapelMoeda[] papeisMoeda;
 
     public Troco(int valor) {
         papeisMoeda = new PapelMoeda[6];
