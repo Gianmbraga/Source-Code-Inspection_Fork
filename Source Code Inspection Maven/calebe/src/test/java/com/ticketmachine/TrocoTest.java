@@ -1,7 +1,11 @@
 package com.ticketmachine;
 
-import com.ticketmachine.core.*;
-import com.ticketmachine.exception.*;
+import com.ticketmachine.core.Troco;
+import com.ticketmachine.core.PapelMoeda;
+import com.ticketmachine.core.TicketMachine;
+
+import com.ticketmachine.exception.PapelMoedaInvalidaException;
+import com.ticketmachine.exception.SaldoInsuficienteException;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
